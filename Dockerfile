@@ -5,6 +5,8 @@ FROM nginx:alpine
 COPY index.html /usr/share/nginx/html/
 COPY styles.css /usr/share/nginx/html/
 COPY script.js /usr/share/nginx/html/
+COPY privacy.html /usr/share/nginx/html/
+COPY terms.html /usr/share/nginx/html/
 
 # Nginx config for SPA and Cloud Run PORT
 RUN echo 'server { \
