@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Omaha Auto Valet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(180deg, #0a1628 0%, #1a2d4a 50%, #0f1f35 100%);
+            color: #e0e6ed;
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px 60px;
+        }
+
+        h1 {
+            color: #F5A623;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+
+        .subtitle {
+            color: #8a9bb3;
+            margin-bottom: 40px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 25px;
+            color: #F5A623;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+            color: #ffb84d;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #fff;
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: #F5A623;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.open .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-answer-content {
+            padding: 0 24px 20px;
+            color: #b8c4d4;
+        }
+
+        .faq-category {
+            color: #F5A623;
+            font-size: 1.1rem;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        a {
+            color: #F5A623;
+        }
+
+        .contact-cta {
+            margin-top: 50px;
+            padding: 30px;
+            background: rgba(245, 166, 35, 0.1);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .contact-cta h3 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .contact-cta p {
+            color: #b8c4d4;
+            margin-bottom: 20px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: #F5A623;
+            color: #0a1628;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .contact-btn:hover {
+            background: #ffb84d;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← Back to Home</a>
+        <h1>Frequently Asked Questions</h1>
+        <p class="subtitle">Find answers to common questions about Omaha Auto Valet</p>
+
+        <h2 class="faq-category">Getting Started</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">How do I book a vehicle transport?</div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    Download the Omaha Auto Valet app, create an account, and tap "Book Now." Enter your pickup and
+                    dropoff locations, select the service type, choose a time, and confirm your booking. A driver will
+                    be matched and you'll receive updates every step of the way.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What services do you offer?</div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    We offer vehicle pickup and delivery, auto shop drop-offs, parking assistance, and general vehicle
+                    transport within the Omaha metro area. Whether you need your car taken to the mechanic while you're
+                    at work or picked up from the airport, we've got you covered.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What areas do you service?</div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    We currently serve the greater Omaha, Nebraska area, including Council Bluffs, Bellevue, Papillion,
+                    La Vista, and surrounding communities.
+                </div>
+            </div>
+        </div>
+
+        <h2 class="faq-category">Payments & Pricing</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">How is pricing calculated?</div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    Pricing is based on distance, service type, and demand. You'll always see the exact price before
+                    confirming your booking — no surprises. Tips for drivers are optional but appreciated.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What payment methods are accepted?</div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    We accept all major credit and debit cards through our secure Stripe payment processing. Payment is
+                    charged when you confirm your booking.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What is your cancellation policy?</div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    Cancel for free before a driver is assigned. Once a driver accepts your trip, cancellations within 5
+                    minutes are free. After that, a small cancellation fee may apply to compensate the driver for their
+                    time.
+                </div>
+            </div>
+        </div>
+
+        <h2 class="faq-category">Safety & Trust</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">Are your drivers background-checked?</div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    Yes! All drivers undergo comprehensive background checks and must have valid driver's licenses and
+                    clean driving records. We only work with trusted, professional drivers.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Is my vehicle insured during transport?</div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    Yes, all trips are covered by liability insurance. Additionally, drivers document your vehicle's
+                    condition with photos and video at pickup and delivery, so there's a clear record of your car's
+                    state throughout the process.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How can I track my vehicle?</div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    Once a driver picks up your vehicle, you can track their location in real-time through the app.
+                    You'll see their progress on a map with live updates and estimated arrival time.
+                </div>
+            </div>
+        </div>
+
+        <h2 class="faq-category">For Drivers</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">How do I become a driver?</div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    Download the app and sign up as a driver. You'll need to provide a valid driver's license, proof of
+                    insurance, and consent to a background check. Once approved, you can start accepting jobs
+                    immediately.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How do drivers get paid?</div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    Drivers earn money for each completed trip plus 100% of tips. Payouts are processed weekly via your
+                    preferred payment method.
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-cta">
+            <h3>Still have questions?</h3>
+            <p>Our support team is here to help.</p>
+            <a href="mailto:support@omahaautovalet.com" class="contact-btn">Contact Support</a>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+
+</html>
